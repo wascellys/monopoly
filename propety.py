@@ -6,7 +6,7 @@ class Propety:
     def __init__(self, id, name=None):
         self.id = id
         self.name = name
-        self.rent = randint(10, 50)
+        self.rent = randint(10, 60)
         self.price = randint(40, 100)
         self.owner = None
 

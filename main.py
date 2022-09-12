@@ -3,7 +3,7 @@ from utils import create_players, create_report
 
 
 def main():
-    resultado = []
+    result = []
     for index in range(300):
         board = Board()
         players = create_players()
@@ -21,8 +21,8 @@ def main():
                 board.run(player)
             board.rotation += 1
 
-        resultado.append(board)
-    create_report(resultado)
+        result.append(board)
+    create_report(result)
 
 
 if __name__ == '__main__':

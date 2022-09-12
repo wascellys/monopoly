@@ -4,6 +4,7 @@
   - [Usando ambiente virtual](#usando-ambiente-virtual)
   - [Instalação das Dependências ](#instalação-das-dependências)
 - [Rodar Projeto](#rodar-projeto)
+- [Cobertura de Testes](#cobertura-de-testes)
 
 ## Instalação
 
@@ -34,3 +35,20 @@ No diretório do projeto execute o comando:
 ```
 python main.py
 ```
+
+## Cobertura de testes
+No diretório do projeto execute o comando:
+```
+coverage run -m pytest
+```
+
+Para ver os testes em detalhe, execute o comando:
+```
+coverage report -m
+```
+
+Para gerar um relatório com os testes em um arquivo HTML, execute o comando:
+```
+coverage html
+```
+Será criada uma nova pasta com o nome "htmlcov", basta abrir no arquivo index.html no navegador.

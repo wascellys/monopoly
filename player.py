@@ -35,7 +35,7 @@ class Player():
         if self.money < 0:
             board.remove_player(self)
 
-    def buy_property(self, propety, board):
+    def buy_property(self, propety, board, injected_value=None):
         buy = False
         if self.profile == PERFIS[1]:
             buy = True
@@ -46,7 +46,7 @@ class Player():
             if self.money - propety.price >= 80:
                 buy = True
         if self.profile == PERFIS[4]:
-            if randint(0, 1) == 1:
+            if injected_value or randint(0, 1) == 1:
                 buy = True
 
         if buy:
