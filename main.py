@@ -1,5 +1,5 @@
 from game import Board
-from utils import create_players, create_report
+from utils import create_players, create_report, show_report
 
 
 def main():
@@ -22,7 +22,8 @@ def main():
             board.rotation += 1
 
         result.append(board)
-    create_report(result)
+    report = create_report(result)
+    show_report(result, *report)
 
 
 if __name__ == '__main__':

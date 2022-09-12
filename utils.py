@@ -20,6 +20,10 @@ def create_report(boards: Board):
     champion_profile = max(profiles, key=profiles.get)
     percentages = list(map(lambda x: ((int(x) * 100) / len(boards)), profiles.values()))
 
+    return percentages, champion_profile, media_rotation, total_timeout, profiles
+
+
+def show_report(boards, percentages, champion_profile, media_rotation, total_timeout, profiles):
     print(f'''
     Total timeout: {total_timeout} 
     Rodadas médias: {media_rotation / len(boards):.2f}    

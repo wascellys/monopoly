@@ -10,6 +10,16 @@ def players():
 
 
 @pytest.fixture
+def profiles():
+    return {
+        1: 'impulsivo',
+        2: 'exigente',
+        3: 'cauteloso',
+        4: 'aleatorio'
+    }
+
+
+@pytest.fixture
 def board():
     board = Board()
     return board
@@ -112,3 +122,8 @@ def test_board_run_player_remove(board, players):
     player_running.money = -1
     board.run(player_running)
     assert not player_running in board.players
+
+
+def test_create_report(game_finish, profiles):
+    report = create_report([game_finish])
+    assert report[1] == profiles[game_finish.champion.id]
